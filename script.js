@@ -6,6 +6,7 @@ function loadShoppingList() {
     // Получаем сохраненные товары из localStorage
     const savedItems = JSON.parse(localStorage.getItem('shoppingList')) || [];
 
+    // Если есть сохраненные товары, добавляем их в список
     savedItems.forEach(itemText => {
         const newItem = document.createElement('li');
         newItem.classList.add('shopping-item');
