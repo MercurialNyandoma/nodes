@@ -1,0 +1,47 @@
+<!-- calendar.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main>
+        <div class="calendar-container">
+            <!-- Таблица для отображения календаря -->
+            <table class="calendar-table">
+                <thead>
+                    <tr>
+                        <th>Понед.</th>
+                        <th>Вторник</th>
+                        <th>Среда</th>
+                        <th>Четверг</th>
+                        <th>Пятница</th>
+                        <th>Суббота</th>
+                        <th>Воскресенье</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="calendar-days">
+                        <!-- Дни недели будут вставляться с помощью JS -->
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Список дел -->
+            <div class="tasks-container">
+                <h3>Список дел на неделю</h3>
+                <div id="tasks-list">
+                    <!-- Задачи для каждого дня будут загружаться сюда -->
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">Назад</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
