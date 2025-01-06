@@ -1,0 +1,33 @@
+<!-- shopping-list.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список покупок</title>
+    <link rel="stylesheet" href="styles/shopping-list.css">
+</head>
+<body>
+
+    <main>
+        <h2>Список покупок</h2>
+
+        <!-- Форма добавления товара -->
+        <div class="shopping-form">
+            <h3>Введите товар</h3> <!-- Заголовок для поля ввода -->
+            <input type="text" id="itemInput" placeholder="Введите товар">
+            <button id="addItem" class="add-button">Добавить товар</button>
+        </div>
+
+        <!-- Список покупок -->
+        <ul id="shoppingList" class="shopping-list">
+            <!-- Элементы списка будут добавляться динамически -->
+        </ul>
+
+        <!-- Кнопка Назад -->
+        <a href="index.html" class="back-button">Назад</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
