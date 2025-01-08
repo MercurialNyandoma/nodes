@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bottom Menu</title>
+  <title>My Notes</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <style>
     * {
@@ -18,18 +18,97 @@
     }
 
     body {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
       font-family: 'DM Sans', sans-serif;
       height: 100%;
       padding-bottom: 60px;
     }
 
-    /* Стили для заголовка */
-    .header {
+    h1 {
       font-family: 'Dancing Script', cursive;
-      font-size: 70px;
+      font-size: 5rem;
       text-align: center;
-      margin-top: 20px;
-      color: #333;
+      margin-bottom: 30px;
+      color: #403d40;
+      width: 100%;
+      letter-spacing: 3px;
+      animation: fadeIn 1.5s ease-out;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1); /* Добавлен эффект свечения */
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Стили для карусели */
+    input[type=radio] {
+      display: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 275px;
+      height: 450px;
+      transform-style: preserve-3d;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .cards {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transition: transform .4s ease;
+      cursor: pointer;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #item-1:checked ~ .cards #song-3, #item-2:checked ~ .cards #song-1, #item-3:checked ~ .cards #song-2 {
+      transform: translatex(-40%) scale(.8);
+      opacity: .4;
+      z-index: 0;
+    }
+
+    #item-1:checked ~ .cards #song-2, #item-2:checked ~ .cards #song-3, #item-3:checked ~ .cards #song-1 {
+      transform: translatex(40%) scale(.8);
+      opacity: .4;
+      z-index: 0;
+    }
+
+    #item-1:checked ~ .cards #song-1, #item-2:checked ~ .cards #song-2, #item-3:checked ~ .cards #song-3 {
+      transform: translatex(0) scale(1);
+      opacity: 1;
+      z-index: 1;
     }
 
     /* Стили для нижнего блока меню */
@@ -189,8 +268,28 @@
 </head>
 <body>
 
-  <!-- Заголовок -->
-  <div class="header">My Calendar</div>
+  <div>
+    <h1>My Notes</h1>
+
+    <div class="container">
+      <input type="radio" name="slider" id="item-1">
+      <input type="radio" name="slider" id="item-2" checked>
+      <input type="radio" name="slider" id="item-3">
+      <div class="cards">
+        <label class="card" for="item-1" id="song-1">
+          <img src="vchera.png" alt="song">
+        </label>
+        <label class="card" for="item-2" id="song-2">
+          <img src="segodnya.png" alt="song">
+        </label>
+        <label class="card" for="item-3" id="song-3">
+          <img src="zavtra.png" alt="song">
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
 
   <div class="bottom-menu">
     <button class="active" id="home" onclick="window.location.href='home.html'">
@@ -216,8 +315,6 @@
       <button>Add an event</button>
     </div>
   </div>
-
-  <div class="overlay" id="overlay"></div>
 
   <script>
     let isButtonsActive = false;

@@ -1,0 +1,24 @@
+<div class="bottom-menu">
+  <button class="active" id="home">
+    <img src="home.png" alt="home">
+  </button>
+  <button id="shop" onclick="window.location.href='shop-list-test.html';">
+    <img src="check.png" alt="shop">
+  </button>
+  <button id="add" onclick="toggleButtons()">
+    <img src="plus.png" alt="add">
+  </button>
+  <button id="calendar">
+    <img src="kalen.png" alt="calendar">
+  </button>
+  <button id="profile">
+    <img src="s.png" alt="profile">
+  </button>
+</div>
+
+<script>
+  function toggleButtons() {
+    const extraButtons = document.getElementById('extraButtons');
+    extraButtons.classList.toggle('active');
+  }
+</script>
