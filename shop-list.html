@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Shopping List</title>
+  <!-- Подключаем общий стиль для меню -->
+  <link rel="stylesheet" href="menu.css">
+  <!-- Подключаем стиль для страницы -->
+  <link rel="stylesheet" href="shop-list.css">
+  <!-- Подключаем шрифт Dancing Script -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Заголовок страницы -->
+  <header class="page-header">My Shopping List</header>
+
+  <!-- Список покупок, куда будут добавляться элементы -->
+  <ul id="shopping-list" class="shopping-list"></ul>
+
+  <!-- Кнопка удаления с текстом "Удалить" -->
+
+
+  <!-- Кнопка "Добавить покупку" -->
+  <button class="add-purchase-btn">
+    <img src="shop-plus.png" alt="Add" class="add-icon">Добавить покупку
+  </button>
+
+  <!-- Модальное окно -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h2>Введите покупку</h2>
+      <input type="text" id="purchase-input" placeholder="Введите покупку">
+      <button id="submit-btn">
+        Отправить
+      </button>
+    </div>
+  </div>
+
+  <!-- Меню -->
+  <div class="menu">
+    <button class="menu-btn" id="menu-button">
+      <img src="home.png" alt="Home">
+    </button>
+    <button class="menu-btn" id="menu-button">
+      <img src="shop.png" alt="Shop">
+    </button>
+    <button class="menu-btn" id="menu-button">
+      <img src="calendar.png" alt="Calendar">
+    </button>
+    <button class="menu-btn" id="menu-button">
+      <img src="profile.png" alt="Profile">
+    </button>
+  </div>
+
+  <!-- Подключаем JavaScript для меню -->
+  <script src="menu.js"></script>
+  <script src="shop-list.js"></script>
+</body>
+</html>

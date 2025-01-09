@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Стиль заголовка */
+.page-header {
+  font-family: 'Dancing Script', cursive;
+  font-size: 75px;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Поле для списка покупок */
+.shopping-list {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Элемент списка */
+.shopping-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.shopping-item:last-child {
+  border-bottom: none;
+}
+
+/* Стиль кнопки удаления */
+.delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px; /* Отступы вокруг текста */
+  background-color: white; /* Белый фон */
+  color: black; /* Черный цвет текста */
+  font-weight: bold;
+  font-size: 16px; /* Размер шрифта */
+  border: 2px solid white; /* Белая рамка */
+  border-radius: 10px; /* Закругленные углы */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для создания объема */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Плавные переходы */
+}
+
+/* Стиль изображения на кнопке удаления */
+.delete-btn img {
+  width: 20px; /* Размер изображения */
+  height: 20px;
+  margin-right: 8px; /* Отступ между картинкой и текстом */
+}
+
+/* Стиль кнопки "Добавить покупку" */
+.add-purchase-btn {
+  position: fixed;
+  bottom: 130px; /* 25px выше нижнего меню */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 10; /* Чтобы кнопка была поверх меню */
+}
+
+/* Стиль для изображения на кнопке */
+.add-icon {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+/* Стили для затемняющего фона */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+/* Стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 300px;
+  border-radius: 8px;
+}
+
+/* Стили для текста и кнопок */
+.modal-content h2 {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 80%; /* Уменьшаем ширину до 80% */
+  padding: 10px;
+  margin: 10px auto; /* Центрируем по горизонтали */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block; /* Чтобы margin auto работал */
+}
+
+/* Обновленный стиль кнопки "Отправить" */
+.modal-content button {
+  width: 100%;
+  padding: 15px 30px; /* То же самое, что и для кнопки "Добавить покупку" */
+  background-color: #ffffff;
+  color: black;
+  font-size: 20px; /* Размер шрифта такой же, как у "Добавить покупку" */
+  font-weight: bold; /* Жирный шрифт, как у кнопки "Добавить покупку" */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для создания объема */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стиль для картинки на кнопке "Отправить" */
+.send-icon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.modal-content button:hover {
+  background-color: #f1f1f1;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
+}

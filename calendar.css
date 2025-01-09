@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Стиль заголовка */
+.page-header {
+  font-family: 'Dancing Script', cursive;
+  font-size: 75px;
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Поле для списка покупок */
+.shopping-list {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #555;
+}
+
+/* Элемент списка */
+.shopping-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.shopping-item:last-child {
+  border-bottom: none;
+}
+
+/* Кнопка удаления */
+.delete-btn {
+  display: flex;
+  align-items: center; /* Центрируем изображение и текст по вертикали */
+  background-color: #ff6b6b;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px; /* Размер шрифта */
+}
+.delete-btn img {
+  margin-right: 8px; /* Отступ между картинкой и текстом */
+  width: 20px; /* Ширина картинки */
+  height: 20px; /* Высота картинки */
+}
+
+/* Кнопка удаления при наведении */
+.delete-btn:hover {
+  background-color: #ff4d4d; /* Цвет фона при наведении */
+}
+
+/* Стиль кнопки "Добавить покупку" */
+.add-purchase-btn {
+  position: fixed;
+  bottom: 130px; /* 25px выше нижнего меню */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 10; /* Чтобы кнопка была поверх меню */
+}
+
+/* Стиль для изображения на кнопке */
+.add-icon {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
