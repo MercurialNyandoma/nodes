@@ -11,7 +11,7 @@ document.querySelectorAll('#menu-button').forEach((button, index) => {
         window.location.href = 'calendar.html'; // Перенаправление на страницу календаря
         break;
       case 3:
-        window.location.href = 'index.html'; // Перенаправление на страницу профиля
+        window.location.href = 'profile.html'; // Перенаправление на страницу профиля
         break;
       default:
         console.error('Invalid menu button');

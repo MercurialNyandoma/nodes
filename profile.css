@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9; /* Светлый фон */
+}
+
+/* Стиль заголовка */
+.page-header {
+  font-family: 'Dancing Script', cursive; /* Подключаем шрифт */
+  font-size: 90px; /* Большой размер текста */
+  text-align: center;
+  margin-top: 20px;
+  color: #333; /* Цвет текста */
+}
+/* Центрирование кнопок на экране */
+.auth-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Высота контейнера - вся высота экрана */
+}
+
+/* Стили для кнопок */
+.auth-buttons button {
+  font-family: 'Dancing Script', cursive; /* Подключаем шрифт */
+  font-size: 66px; /* Увеличиваем размер текста */
+  padding: 20px 40px; /* Увеличиваем внутренние отступы */
+  margin: 15px; /* Расстояние между кнопками */
+  border: none; /* Убираем границы */
+  border-radius: 20px; /* Скругляем углы */
+  cursor: pointer;
+  background-color: white; /* Белый фон */
+  color: black; /* Черный текст */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляем объем (тень) */
+  transition: transform 0.2s, box-shadow 0.2s; /* Анимация нажатия */
+}
+
+/* Анимация при наведении */
+.auth-buttons button:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Увеличиваем тень */
+  transform: scale(1.05); /* Легкое увеличение кнопки */
+}
+
+/* Анимация при нажатии */
+.auth-buttons button:active {
+  transform: scale(0.95); /* Уменьшение при нажатии */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Уменьшение тени */
+}
